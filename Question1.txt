@@ -1,10 +1,10 @@
-Question Title - ## Advanced File Management
-**Question Link :**
+  Question Title:
+Advanced File Management
+  Question Link:
 https://my.newtonschool.co/playground/code/ch93cb4hnf4i
 
-## Solution:
+  Solution:
 
-'''bash
 mkdir project-files
 cd project-files
 touch report.docx summary.docx draft.docx
@@ -14,9 +14,8 @@ mv draft.docx old
 mv summary.docx final_summary.docx
 cp final_summary.docx old
 rm report_backup.docx
-'''
 
-## Approach:
+  Approach:
 1)First,I created a folder with the name project-files
 2)I navigated into project-files
 3)I then created three files simultaneously using touch command,and named each file report.docx summary.docx & draft.docx
