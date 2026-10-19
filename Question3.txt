@@ -1,0 +1,37 @@
+  Question Title:
+Data Breach Response
+  Question Link:
+https://my.newtonschool.co/playground/code/asijmgkg0oa9
+  Solution:
+cd breach_response
+cp evidence/log_dump.txt log_dump.txt
+chmod 777 evidence
+mv evidence secure
+cd ..
+chmod 555 /box/breach_response/secure/evidence
+chmod 777 /box/breach_response/reports/incident_summary.txt
+echo "Breach confirmed" >> /box/breach_response/reports/incident_summary.txt
+chmod 444 /box/breach_response/reports/incident_summary.txt
+echo "Forensics Complete" > /box/breach_response/secure/forensics_report.txt
+chmod 600 /box/breach_response/secure/forensics_report.txt
+chmod 777 /box/breach_response/reports/incident_summary.txt
+echo "Escalated to security team" >> /box/breach_response/reports/incident_summary.txt
+chmod 444 /box/breach_response/reports/incident_summary.txt
+
+  Approach:
+1)First i navigated into the breach_response folder
+2)I made a copy of log_dump.txt file located inside evidence folder into the main parent directory breach_response
+3)I changed the permission to 777 of the evidence folder
+4)I moved the entire evidence folder into the secure folder
+5)Then i navigated back to the box folder and then changed the permission back to 555 for the evidence folder
+6)Then i gave 777 permission to incident_summary.txt located inside /box/breach_response/reports so that i could add a line
+7)Then i appended the line "Breach confirmed" into incident_summary.txt
+8)Then i reseted the permission of incident_summary.txt file back to 444
+9)Then i appended the line "Forensics Complete" into forensics_report.txt
+10)Then i changed the permission of forensics_report.txt to 600
+11)Then i gave write permission again to incident_summary.txt becuase i had to append a line
+12)I then appended the line "Escalated to security team" into incident_summary.txt
+13)Finally i reseted the permission back to 444 for the incident_summary.txt file
+
+  Result:
+The log_dump.txt file has been copied from the evidence folder into the main breach_response directory. The evidence folder has been moved into the secure folder, and its permissions have been changed as required. The incident_summary.txt file now contains the lines "Breach confirmed" and "Escalated to security team", with its permissions reset to 444. The forensics_report.txt file has been updated with "Forensics Complete" and its permissions changed to 600.
