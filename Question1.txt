@@ -26,3 +26,6 @@ rm report_backup.docx
 8)Then i made a copy of the file final_summary.docx into the folder old
 9)Then i deleted the report_backup.docx file which i had created
 
+  Result:
+The service directory now contains the folders controllers, models, routes, and middleware, along with the files server.js and README.md. The server.js file contains console.log("Server started");, and the README.md file contains API Service.
+
