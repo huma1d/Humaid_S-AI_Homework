@@ -1,0 +1,34 @@
+  Question Title:
+Deployment Project Permissions
+  Question Link:
+https://my.newtonschool.co/playground/code/kj1re8m8s7h2
+  Solution:
+ls -la /box/deployment/app
+chmod 700 /box/deployment/app/server.py
+chmod 700 /box/deployment/app/handler.py
+chmod 700 /box/deployment/app/settings.py
+chmod 770 /box/deployment/datasets
+chmod 770 /box/deployment/datasets/test.csv
+chmod 770 /box/deployment/datasets/train.csv
+chmod 644 /box/deployment/docs/OVERVIEW.md
+chmod 755 /box/deployment/bin/start.sh
+chmod 755 /box/deployment/bin/stop.sh
+chmod 755 /box/deployment/bin/healthcheck.sh
+ls -la /box/deployment/bin/
+
+  Approach:
+1)First i checked each and every files/folder permission present under the app folder using ls -la,so that i can get a hold of what changes i need to do as per the question suggests
+2)Then i changed the permission of /box/deployment/app/server.py to 700,meaning the user has all the permission and other two have none
+3)Then i changed the permission of /box/deployment/app/handler.py to 700,meaning the user has all the permission and other two have none
+4)Then i changed the permission of /box/deployment/app/settings.py to 700,meaning the user has all the permission and other two have none
+5)Then i changed the permission of /box/deployment/datasets to 770,meaning the user and group has every permission,rest have none
+6)Then i changed the permission of /box/deployment/datasets/test.csv to 770,meaning the user and group has every permission,rest have none
+7)Then i changed the permission of /box/deployment/datasets/train.csv to 770,meaning the user and group has every permission,rest have none
+8)Then i changed the permission of /box/deployment/docs/OVERVIEW.md to 644,meaning the user and read and write permission,and group & others have only read permission
+9)Then i changed the permission of /box/deployment/bin/start.sh to 755,meaning the user has all permissions while group and other have only read and execute
+10)Then i changed the permission of /box/deployment/bin/stop.sh to 755,meaning the user has all permissions while group and other have only read and execute
+11)Then i changed tthe permission of /box/deployment/bin/healthcheck.sh to 755,meaning the user has all permissions while group and other have only read and execute
+12)Lastly using ls -la/bin so that i can saw all the permissions of files/folder present under the bin folder
+
+  Result:
+The permissions of the files and folders inside the deployment directory have been updated as required. The Python files server.py, handler.py, and settings.py now have 700 permissions, while the datasets directory and its CSV files have 770 permissions. The OVERVIEW.md file has 644 permissions, and the scripts start.sh, stop.sh, and healthcheck.sh have 755 permissions. Finally, the ls -la command was used to verify the permissions of the files and folders inside the bin directory.
