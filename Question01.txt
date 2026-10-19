@@ -1,0 +1,31 @@
+  Question Title:
+Advanced File Management
+  Question Link:
+https://my.newtonschool.co/playground/code/ch93cb4hnf4i
+
+  Solution:
+
+mkdir project-files
+cd project-files
+touch report.docx summary.docx draft.docx
+cp report.docx report_backup.docx
+mkdir old
+mv draft.docx old
+mv summary.docx final_summary.docx
+cp final_summary.docx old
+rm report_backup.docx
+
+  Approach:
+1)First,I created a folder with the name project-files
+2)I navigated into project-files
+3)I then created three files simultaneously using touch command,and named each file report.docx summary.docx & draft.docx
+4)Then i created a copy of report.docx into a new file report_backup.docx
+5)Then i made a new folder inside project-files named 'old'
+6)Then i moved draft.docx into the newly created folder 'old'
+7)Then i changed the name of the folder summary.docx into final_summary.docx using the 'mv' conmand
+8)Then i made a copy of the file final_summary.docx into the folder old
+9)Then i deleted the report_backup.docx file which i had created
+
+  Result:
+The service directory now contains the folders controllers, models, routes, and middleware, along with the files server.js and README.md. The server.js file contains console.log("Server started");, and the README.md file contains API Service.
+
